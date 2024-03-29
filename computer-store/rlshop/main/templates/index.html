@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Computer store</title>
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+    <body>
+        <header>
+            <div> Main page | <a href="about">About</a> | <a href="contacts">Contacts</a></div>
+            {% if udata == "" %}
+            <div align="right"><a href="sign-up">Sign up</a> | <a href="sign-in">Sign in</a></div>
+            {% else %}
+            <div align="right"><a href="user-data">{{ udata.name }}</a></div>
+            <div align="right" style="font-size: 12px;"><a href="sign-out">Sign out</a></div>
+            {% endif %}
+            <h1 class="main" align="center">Welcome to computer store!</h1>     
+        </header>
+        <h1 class="main" align="center">Products:</h1>
+        <h2 class="main" align="center"><a href="products/videocards">Videocards</a></h2>
+        <h2 class="main" align="center"><a href="products/processors">Processors</a></h2>
+    </body>
+</html>

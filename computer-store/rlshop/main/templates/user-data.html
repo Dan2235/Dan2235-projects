@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Computer store</title>
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+    <body>
+        <header>
+            <h3><a href="/">Main page</a></h3>  
+        </header>
+        <h2 class="main">Name:</h2>
+        <p style="font-size: 20px;" class="main">{{ udata.name }}</p>
+        <h2 class="main">Age:</h2>
+        <p style="font-size: 20px;" class="main">{{ udata.age }} лет</p>
+        <h2 class="main">Email:</h2>
+        <p style="font-size: 20px;" class="main">{{ udata.email }}</p>
+        <h2 class="main">Your cart:</h2>
+        {% for i in products %}
+        <p style="font-size: 20px;" class="main">{{ i }}  <a href="del-from-cart/{{ i }}">Delete</a></p>
+        {% endfor %}
+    </body>
+</html>
