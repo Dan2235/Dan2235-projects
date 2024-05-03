@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Product
 from main.models import Account, User
 
-
 def get_end(count):
     end = ""
 

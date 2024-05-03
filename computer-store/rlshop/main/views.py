@@ -110,3 +110,6 @@ def try_sign_up(request):
                 return render(request, "sign-up.html",
                     {"text": forb2, "form": aform}, status=403
                 )
+
+def pulse_animation(request):
+    return render(request, "pulse-animation.html") 

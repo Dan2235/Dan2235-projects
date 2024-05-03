@@ -29,5 +29,6 @@ urlpatterns = [
     path('user-data', mv.user_data),
     path('products/', include(products)),
     path('put-to-cart/<str:product>', pv.put_to_cart),
-    path('del-from-cart/<str:product>', pv.del_from_cart),     
+    path('del-from-cart/<str:product>', pv.del_from_cart),
+    path('pulse', mv.pulse_animation),     
 ]
