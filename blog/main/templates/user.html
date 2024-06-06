@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blog</title>
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+    <body>
+        <header>
+            <div style="font-size: 16px;"><a href="/">Main page</a></div>
+        </header>
+        <h2 class="main">{{user.channel_name}}</h2>
+        <h4 class="main">@{{user.user_name}}</h4>
+        <h3 class="main">{{user.subscribers}} subscribers</h3>
+        <h3 class="main">Posts:</h3>
+        {%for i in posts%}
+        <a href="post/{{i.id}}">{{i.title}}</a>
+        {%endfor%}
+</html>

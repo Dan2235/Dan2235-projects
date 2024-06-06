@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blog</title>
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+    <body>
+        <header>
+            <div style="font-size: 16px;"><a href="/">Main page</a></div>
+        </header>
+        <h2>Name: {{name}}</h2>
+            <form method="post" action="edit-2/{{type}}">
+                <label for="new_name">New channel/user name</label>
+                <input name="new_name">
+                <input type="submit" value="Change">
+            </form>
+    </body>
+</html>

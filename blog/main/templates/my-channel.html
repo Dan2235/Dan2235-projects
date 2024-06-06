@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blog</title>
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+    <body>
+        <header>
+            <div style="font-size: 16px;"><a href="/">Main page</a></div>
+        </header>
+        <h2 class="main">{{udata.channel_name}}  <a href="edit/channel_name">Change</a></h2>
+        <h4 class="main">@{{udata.user_name}}  <a href="edit/user_name">Change</a><</h4>
+        <h3 class="main">{{udata.subscribers}} subscribers</h3>
+        <h2 class="main"><a href="create-post">Create post</a></h2>
+</html>
